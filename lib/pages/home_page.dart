@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -9,11 +8,26 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("First App"),
-        backgroundColor: Colors.amber[600],
+        // backgroundColor: Colors.amber[600],
         centerTitle: true,
       ),
-      drawer: Drawer(),
-      body: Text("Hello World"),
+      drawer: Drawer(
+        // backgroundColor: Colors.amber[600],
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(20, 80, 20, 0),
+          child: Text(
+            "Tarek Mahmud",
+            style: TextStyle(
+              fontFamily: 'Anek Malayalam',
+              fontWeight: FontWeight.w600,
+              fontSize: 20,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
+      body: Text("Hello World",
+      style: TextStyle(fontSize: 30),),
     );
   }
 }
